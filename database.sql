@@ -39,7 +39,7 @@ CREATE TABLE students (
 
 CREATE TABLE tb_tenpend (
 	`tenpend_id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT , 
-	`tenpend_nama` VARCHAR(255) NOT NULL AUTO_INCREMENT , 
+	`tenpend_nama` VARCHAR(255) NOT NULL , 
 	`tenpend_nip` VARCHAR(255) NOT NULL , 
 	`tenpend_email` VARCHAR(255) NOT NULL , 
 	`tenpend_no_telp` VARCHAR(255) NOT NULL , 
@@ -52,7 +52,7 @@ CREATE TABLE tb_tenpend (
 
 CREATE TABLE tb_pendidik (
 	`pend_id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT , 
-	`pend_nama` VARCHAR(255) NOT NULL AUTO_INCREMENT , 
+	`pend_nama` VARCHAR(255) NOT NULL , 
 	`pend_nip` VARCHAR(255) NOT NULL , 
 	`pend_email` VARCHAR(255) NOT NULL , 
 	`pend_no_telp` VARCHAR(255) NOT NULL , 
