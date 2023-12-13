@@ -27,7 +27,7 @@ CREATE TABLE tb_users (
 	UNIQUE KEY(user_email)
 );
 
-CREATE TABLE `dbpbwl_project10`. (
+CREATE TABLE students (
 	`students_id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT , 
 	`students_nis` VARCHAR(50) NOT NULL , 
 	`students_name` VARCHAR(255) NOT NULL , 
@@ -37,7 +37,7 @@ CREATE TABLE `dbpbwl_project10`. (
 	UNIQUE (`students_nis`)
 );
 
-CREATE TABLE `dbpbwl_project10`.`tb_tenpend` (
+CREATE TABLE tb_tenpend (
 	`tenpend_id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT , 
 	`tenpend_nama` VARCHAR(255) NOT NULL AUTO_INCREMENT , 
 	`tenpend_nip` VARCHAR(255) NOT NULL , 
@@ -50,6 +50,19 @@ CREATE TABLE `dbpbwl_project10`.`tb_tenpend` (
 	UNIQUE (`tenpend_nama`)
 );
 
+CREATE TABLE tb_pendidik (
+	`pend_id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT , 
+	`pend_nama` VARCHAR(255) NOT NULL AUTO_INCREMENT , 
+	`pend_nip` VARCHAR(255) NOT NULL , 
+	`pend_email` VARCHAR(255) NOT NULL , 
+	`pend_no_telp` VARCHAR(255) NOT NULL , 
+	`pend_status` VARCHAR(255) NOT NULL , 
+	`created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP , 
+	`updated_at` TIMESTAMP on update CURRENT_TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP , 
+	PRIMARY KEY (`pend_id`), 
+	UNIQUE (`pend_nama`)
+);
+
 INSERT INTO
 	tb_users
 VALUES
@@ -60,4 +73,15 @@ VALUES
 		'Administrator',
 		'2023-11-03 03:40:43',
 		NULL
+	);
+
+INSERT INTO
+	students (
+		students_nis, 
+		students_name
+	)
+VALUES
+	(
+		'298187214',
+		'students pertama',
 	);
