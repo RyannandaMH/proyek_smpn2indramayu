@@ -27,6 +27,29 @@ CREATE TABLE tb_users (
 	UNIQUE KEY(user_email)
 );
 
+CREATE TABLE `dbpbwl_project10`. (
+	`students_id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT , 
+	`students_nis` VARCHAR(50) NOT NULL , 
+	`students_name` VARCHAR(255) NOT NULL , 
+	`created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP , 
+	`updated_at` TIMESTAMP on update CURRENT_TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP , 
+	PRIMARY KEY (`students_id`), 
+	UNIQUE (`students_nis`)
+);
+
+CREATE TABLE `dbpbwl_project10`.`tb_tenpend` (
+	`tenpend_id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT , 
+	`tenpend_nama` VARCHAR(255) NOT NULL AUTO_INCREMENT , 
+	`tenpend_nip` VARCHAR(255) NOT NULL , 
+	`tenpend_email` VARCHAR(255) NOT NULL , 
+	`tenpend_no_telp` VARCHAR(255) NOT NULL , 
+	`tenpend_status` VARCHAR(255) NOT NULL , 
+	`created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP , 
+	`updated_at` TIMESTAMP on update CURRENT_TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP , 
+	PRIMARY KEY (`tenpend_id`), 
+	UNIQUE (`tenpend_nama`)
+);
+
 INSERT INTO
 	tb_users
 VALUES

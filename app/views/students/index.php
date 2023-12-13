@@ -8,8 +8,8 @@
                   <th>NO</th>
                   <th>NIS</th>
                   <th>FULL NAME</th>
-                  <th>EDIT</th>
-                  <th>DELETE</th>
+                  <th>UPDATE AT</th>
+                  <th>ACTION</th>
             </tr>      
       </thead>
       <tbody>
@@ -19,8 +19,11 @@
                         <td><?php echo $no; ?></td>
                         <td><?php echo $row['students_nis']; ?></td>
                         <td><?php echo $row['students_name']; ?></td>
-                        <td><a href="<?php echo URL; ?>/students/edit/<?php echo $row['students_id']; ?>" class="btn">Edit</a></td>
-                        <td><a href="<?php echo URL; ?>/students/delete/<?php echo $row['students_id']; ?>" class="btn" onclick="return confirm('Are you sure?')">Delete</a></td>
+                        <td><?php echo $row['updated_at']; ?></td>
+                        <td>
+                              <a href="<?php echo URL; ?>/students/edit/<?php echo $row['students_id']; ?>" class="btn">Edit</a>
+                              <a href="<?php echo URL; ?>/students/delete/<?php echo $row['students_id']; ?>" class="btn" onclick="return confirm('Are you sure?')">Delete</a>
+                        </td>
                   </tr>
             <?php $no++;
             } ?>
