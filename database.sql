@@ -74,14 +74,3 @@ VALUES
 		'2023-11-03 03:40:43',
 		NULL
 	);
-
-INSERT INTO
-	students (
-		students_nis, 
-		students_name
-	)
-VALUES
-	(
-		'298187214',
-		'students pertama',
-	);
