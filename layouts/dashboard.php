@@ -38,17 +38,17 @@
 					</a>
 				</li>
 				<li>
-					<a href="<?php echo URL; ?>/categories">
+					<a href="<?php echo URL; ?>/pendidik">
 						<img class="icon" src="<?php echo AST; ?>/img/menu.png" alt=""> Pendidik
 					</a>
 				</li>
 				<li>
-					<a href="<?php echo URL; ?>/posts">
+					<a href="<?php echo URL; ?>/tenpendidik">
 						<img class="icon" src="<?php echo AST; ?>/img/menu.png" alt=""> Tenaga Kependidikan
 					</a>
 				</li>
 				<li>
-					<a href="<?php echo URL; ?>/teachers">
+					<a href="<?php echo URL; ?>/students">
 						<img class="icon" src="<?php echo AST; ?>/img/menu.png" alt=""> Siswa
 					</a>
 				</li>
