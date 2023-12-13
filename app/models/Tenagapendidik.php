@@ -22,7 +22,6 @@ class Tenagapendidik extends Model
             $nip = $_POST['NIP'];
             $email = $_POST['email'];
             $no_telp = $_POST['no_telp'];
-            $status = $_POST['status '];
 
             $sql = "INSERT INTO tb_tenpend
             SET tenpend_nama=:tenpend_nama, tenpend_nip=:tenpend_nip, tenpend_email=:tenpend_email, tenpend_no_telp=:tenpend_no_telp, tenpend_status='Tenaga Kependidikan'";
@@ -77,7 +76,7 @@ class Tenagapendidik extends Model
 
       public function delete($id)
       {
-            $sql = "DELETE FROM tb_tenpen WHERE tenpend_id=:tenpend_id";
+            $sql = "DELETE FROM tb_tenpend WHERE tenpend_id=:tenpend_id";
             $stmt = $this->db->prepare($sql);
 
             $stmt->bindParam(":tenpend_id", $id);
